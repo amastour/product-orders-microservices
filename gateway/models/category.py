@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import List, Optional
 from pydantic import BaseModel
 from datetime import datetime
-from product.models.product import Product
+from gateway.models.product import Product
 
 
 class Category(BaseModel):
