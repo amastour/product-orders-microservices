@@ -24,8 +24,8 @@ app = FastAPI()
     authentication_token_decoder="gateway.utils.auth.decode_access_token",
     service_authorization_checker="gateway.utils.auth.generate_request_header",
     service_header_generator=None,
-    response_model="gateway.models.client.Client",
-    response_list=True
+    response_model="gateway.models.client.ListClientResponse",
+    response_list=False
 )
 async def list_clients(request: Request, response: Response):
     pass

@@ -132,7 +132,7 @@ def route(
             payload = payload_obj.dict() if payload_obj else {}
 
             url = f'{service_url}{path}'
-
+            print(url)
             try:
                 resp_data, status_code_from_service = await make_request(
                     url=url,

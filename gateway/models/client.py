@@ -15,11 +15,7 @@ class Client(BaseModel):
     createdAt: Optional[datetime]
     updatedAt: Optional[datetime]
 
-    class Config:
-        orm_mode = True
-        allow_population_by_field_name = True
-        arbitrary_types_allowed = True
-        json_encoders = {ObjectId: str}
+
 
 class UpdateClientSchedma(BaseModel):
     first_name: str
@@ -27,11 +23,6 @@ class UpdateClientSchedma(BaseModel):
     phone_number: Optional[str]
     adress: Optional[str]
 
-    class Config:
-        orm_mode = True
-        allow_population_by_field_name = True
-        arbitrary_types_allowed = True
-        json_encoders = {ObjectId: str}
 
 class ClientResponse(BaseModel):
     status: str
